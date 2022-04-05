@@ -92,7 +92,7 @@ static int http_api_v2(struct aclk_query_thread *query_thr, aclk_query_t query)
 
 #ifdef NETDATA_WITH_ZLIB
     int z_ret;
-    BUFFER *z_buffer = buffer_create(NETDATA_WEB_RESPONSE_INITIAL_SIZE);
+    BUFFER *z_buffer = buffer_create(NETDATA_WEB_RESPONSE_INITIAL_SIZE * 64);
     char *start, *end;
 #endif
 
