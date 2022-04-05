@@ -738,6 +738,7 @@ void aclk_start_streaming(char *node_id, uint64_t sequence_id, time_t created_at
         log_access("ACLK REQ [%s (N/A)]: CHARTS STREAM ignored, invalid node id", node_id);
         return;
     }
+    log_access("ACLK REQ [%s (N/A)]: CHARTS STREAM RECEIVED for node id", node_id);
 
     struct aclk_database_worker_config *wc  = NULL;
     rrd_rdlock();
